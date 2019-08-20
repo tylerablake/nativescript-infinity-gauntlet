@@ -1,2 +1,2 @@
-# nativescript-infinity-gauntlet
-A NativeScript presentation for Code PaLOUsa 2019
+# nativescript-intro
+Repo for talks, demos, tutorials for introductions to NativeScript

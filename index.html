@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>NativeScript Infinity Gauntlet: Mobile Endgame</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="#3A435E">
+				<h2>NativeScript Infinity Gauntlet</h2>
+				<h3>Mobile Endgame</h3>
+
+				<div class="title-contact-info">
+					<p>
+						<a href="http://tylerablake.com" target="_blank">tylerablake.com</a>
+					</p>
+					<p>
+						<a href="http://twitter.com/TylerBlakeLOU" target="_blank">@TylerBlakeLOU</a></small>
+					</p>
+				</div>
+				<aside class="notes">
+					<h2>GET A SELFIE</h2>
+
+					<p>Has anybody ever heard of NativeScript?</p>
+					<p>Has anybody use or tried NativeScript?</p>
+					<p>Has anybody heard of Angular?....</p>
+				</aside>
+			</section>
+			<section data-background="#3A435E">
+				<h2>Thank you sponsors!!!</h2>
+
+				<img src="assets/images/cpl-2019-sponsors.png" height="75%" width="75%">
+
+			</section>
+			<section data-background="#3A435E">
+				<section>
+					<h2>About Me</h2>
+					<br>
+
+					<div class="left-content">
+						<p>NativeScript developer @FocustApps</p>
+						<p>Open Source Contributor</p>
+						<ul>
+							<li>NS Market Samples</li>
+							<li>GitHub Issues</li>
+							<li>NS Community Slack</li>
+						</ul>
+					</div>
+					<div class="right-content">
+						<img src="assets/images/crowdSurf.jpg" style="text-align: center;">
+					</div>
+					<aside class="notes">
+						<h2>GET A SELFIE IF YOU FORGOT</h2>
+
+						<p>I have been working as a NS developer since Feb 2018 so I'm more than qualified to give this
+							talk....</p>
+					</aside>
+				</section>
+			</section>
+
+			<section data-background="#3A435E">
+				<section>
+					<h2>Agenda</h2>
+				</section>
+				<section>
+					<ul>
+						<ul>
+							<li>What is NativeScript?</li>
+							<li class="fragment">How it works</li>
+							<li class="fragment">Why NativeScript?</li>
+							<li class="fragment">Ways to get started</li>
+							<li class="fragment">Resources</li>
+						</ul>
+
+					</ul>
+					<aside class="notes">
+						<p>The goal of this talk is:</p>
+						<p>To give you a very brief overview of NativeScript</p>
+						<p>Hopefully spark some interest to</p>
+						<ul>
+							<li>try it on your own</li>
+							<li>reach out and ask questions after</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+
+			<section data-background="#3A435E">
+				<section>
+					<h2>Space</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Framework to build truly native cross platform mobile apps</li>
+						<li class="fragment">Open Source, backed by Progress</li>
+						<li class="fragment">Multiple flavors (Vanilla, Angular, and Vue)</li>
+						<li class="fragment">
+							Wait... but <u>truly native</u> apps?
+							<ul>
+								<li class="fragment">Access to native objc/Java classes</li>
+								<li class="fragment">Provides native performance</li>
+								<li class="fragment">Enables the same customization as native</li>
+							</ul>
+						</li>
+					</ul>
+					<aside class="notes">
+						<p>It has multiple flavors</p>
+						<ul>
+							<li>Vanilla - Plain JS and/or TypeScript</li>
+							<li>Angular</li>
+							<li>Vue</li>
+							<li>React is in the works as well</li>
+						</ul>
+
+						<p>Truly native apps? Yes!</p>
+						<p>You have access to all native API's (objc and java)</p>
+						<p>This results in native performance</p>
+						<p>As well as providing the same amount of customization as native</p>
+					</aside>
+				</section>
+			</section>
+			<section data-background="#3A435E">
+				<section>
+					<h2>Reality</h2>
+				</section>
+				<section data-background="#3A435E">
+					<img src="assets/images/how-it-works.png" style="text-align: center;">
+					<aside class="notes">
+						<p>You write JS/TS code</p>
+						<p>It runs inside of the device's JavaScript VM</p>
+						<ul>
+							<li>Android - V8</li>
+							<li>iOS - JavaScriptCore</li>
+						</ul>
+						<p>The NS runtime generates metadata which tells what native API's are available</p>
+						<p>The JS code is ran through a type conversion process to convert it to native API's</p>
+						<p>The converted code is sent to the call dispatcher to call the native API's</p>
+					</aside>
+				</section>
+			</section>
+			<section data-background="#3A435E">
+				<section>
+					<h2>Power</h2>
+					<aside class="notes">
+						<p>I chose NS because I had a full stack web background and wanted to get into Angular and
+							mobile</p>
+					</aside>
+				</section>
+				<section>
+					<ul>
+						<li>100% sharable code across platforms (Android and iOS)</li>
+						<li class="fragment">Can use existing web development knowledge</li>
+						<li class="fragment">
+							Allows you to use existing libraries
+							<ul>
+								<li class="fragment">NPM (Node, some exclusions apply 😁)</li>
+								<li class="fragment">CocoaPods (iOS)</li>
+								<li class="fragment">Android Arsenal (Android)</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+			</section>
+			<section data-background="#3A435E">
+				<section>
+					<h2>Mind</h2>
+					<br>
+				</section>
+				<section>
+					<h2>NativeScript Playground</h2>
+					<br>
+
+					<ul>
+						<li class="fragment">Web based IDE</li>
+						<li class="fragment">Get started quickly and test on iOS and Android devices</li>
+					</ul>
+					<aside class="notes">
+						<p>Give quick demo of NS Playground</p>
+
+						<ul>
+							<li>How to create a new project</li>
+							<li>Review File Explorer</li>
+							<li>Show drag and drop UI</li>
+							<li>Show QR code and scanning</li>
+							<li>Show the "Getting Started" dropdown (Interactive Tutorials, Code Samples, Documentation,
+								UI Tips)</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<h2>NativeScript Sidekick</h2>
+					<br>
+					<ul>
+						<li class="fragment">Tool to accelerate building NS apps with a UI for creating, building, and
+							testing NativeScript apps</li>
+						<li class="fragment">GUI for the CLI</li>
+						<li class="fragment">Lets you use your preferred IDE</li>
+					</ul>
+					<aside class="notes">
+						<p>Give quick demo of NS Sidekick</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>NativeScript CLI</h2>
+					<br>
+					<ul>
+						<li class="fragment">Configure your local machine</li>
+						<li class="fragment">Richest development experience</li>
+					</ul>
+					<aside class="notes">
+						<p>Demo the NS CLI (if time allows)</p>
+					</aside>
+				</section>
+
+			</section>
+
+			<section data-background="#3A435E">
+				<section>
+					<h2>Time</h2>
+					<aside class="notes">
+						<p>NativeScript doesn't use HTML or the DOM, it uses it's own XML-esque markup</p>
+
+						<p>In NativeScript everything must be inside of a container</p>
+						<br>
+
+						<p>There are 6 layout containers </p>
+
+						<ul>
+							<li>Absolute (define the x,y position for the top left of the layout)</li>
+							<li>Dock (force the elements to dock to the top, bottom, left, or right of the layout)</li>
+							<li>Grid (similar to Bootstrap but you get to define your column and row sizes, etc)</li>
+							<li>Stack (stacks elements on top of eachother or beside each other)</li>
+							<li>Wrap (similar to StackLayout but wraps instead of stacking)</li>
+							<li>Flexbox (a non-conforming implementation of the CSS Flexible Box Layout)</li>
+						</ul>
+
+						<p>Now ScrollView is NOT a <b>layout container</b> but can be treated like one</p>
+
+					</aside>
+				</section>
+				<section data-background="#3A435E">
+					<div class="left-content">
+						<br>
+						<br>
+						<p>Link to follow along</p>
+						<a target="_blank" href="https://bit.ly/2LlqFYm">https://bit.ly/2LlqFYm</a>
+					</div>
+					<div class="right-content">
+						<img src="assets/images/layout-demo-screenshot.png" style="text-align: center;" height="70%"
+							width="70%">
+					</div>
+				</section>
+			</section>
+
+			<section data-background="#3A435E">
+				<section>
+					<h2>Soul</h2>
+				</section>
+				<section data-background="#3A435E">
+					<div class="left-content">
+						<br>
+						<p>Link to follow along</p>
+						<a target="_blank" href="https://bit.ly/32wBkEC">https://bit.ly/32wBkEC</a>
+					</div>
+					<div class="right-content">
+						<img src="assets/images/basic-widget-demo-screenshot.png" style="text-align: center;"
+							height="70%" width="70%">
+					</div>
+
+				</section>
+			</section>
+
+			<section data-background="#3A435E">
+				<h2>Additional Resources</h2>
+				<br>
+				<ul>
+					<li class="fragment">
+						<a href="https://market.nativescript.org/" target="_blank">NS Marketplace (samples, templates,
+							demos)</a>
+					</li>
+					<li class="fragment">
+						<a href="https://www.nativescript.org/slack-invitation-form" target="_blank">NS Community Slack
+							(help and guidance)</a>
+					</li>
+					<li class="fragment">
+						<a href="https://docs.nativescript.org/" target="_blank">NS Docs</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
